@@ -1,48 +1,54 @@
+**Resume Generator PDF**
 
-# Resume Generator PDF
+This Python script generates a **professional resume** in PDF format using the `argparse` and `FPDF` libraries. It allows for **customization** of font size, font color, and background color, and organizes sections like **Education**, **Projects**, **Experience**, **Skills**, and **Extracurricular Activities**.
 
-This Python script allows you to generate a professional resume in PDF format using the `argparse` and `FPDF` libraries. It allows for customization of font size, font color, and background color, and includes sections for education, projects, experience, skills, and extracurricular activities.
+---
 
-## Features
+**Features**
 
-- Customizable font size, font color, and background color.
-- Sections for **Education**, **Projects**, **Experience**, **Skills**, and **Extracurricular Activities**.
-- Support for bullet points for details under each section.
-- A table format for displaying educational qualifications with columns for institution name, year, and CGPA.
+- **Customizable Font Size, Font Color, and Background Color**
+- Sections include:
+  - **Education**
+  - **Projects**
+  - **Experience**
+  - **Skills**
+  - **Extracurricular Activities**
+- **Table Format** for education details.
+- **Bullet Points** for project and experience descriptions.
 
-## Prerequisites
+---
 
-- Python 3.x
+**Prerequisites**
+
+- **Python 3.x** installed on your system.
 - Required Python packages:
-  - `argparse` (for command-line argument parsing)
-  - `fpdf` (for PDF generation)
-
-You can install the required package using `pip`:
+  - `argparse` (for parsing command-line arguments)
+  - `fpdf` (for generating PDF files)
+**Install Dependencies**
 ```bash
 pip install fpdf
 ```
 
-## Usage
+---
 
-### Command-Line Arguments
+**Usage**
 
-You can specify custom font size, font color, and background color via command-line arguments.
+You can run the script using the following **command-line arguments**:
 
-#### Arguments:
-- `--font-size`: Font size for the text (default is `14`).
-- `--font-color`: Font color in hex format (default is `#000000`).
-- `--background-color`: Background color in hex format (default is `#FFFFFF`).
+**Command-Line Arguments**
+- `--font-size`: Font size for the text (**default: 14**).
+- `--font-color`: Font color in hex format (**default: #000000**).
+- `--background-color`: Background color in hex format (**default: #FFFFFF**).
 
-### Example Usage
-
-To generate a resume with a custom font size and color:
+**Example**
 ```bash
 python resume_generator.py --font-size 16 --font-color "#333333" --background-color "#F0F0F0"
 ```
 
-## Resume Data Structure
+---
+**Data Structure**
 
-The `resume_data` dictionary contains the information that will be populated in the resume. Here's an example of how it’s structured:
+The resume content is stored in a Python dictionary named `resume_data`. Below is an example of how the data should be structured:
 
 ```python
 resume_data = {
@@ -76,12 +82,39 @@ resume_data = {
 }
 ```
 
-### Modify `resume_data` to reflect your own personal information, education, experience, skills, and more.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Customizing the Data**
+Edit the `resume_data` dictionary in the script to add **your own information**.
 
 ---
 
-This README provides a guide on how to use your resume generator script, including the necessary dependencies, how to run the script, and an example of the required data structure. Let me know if you need further adjustments!
+**Output**
+
+The generated resume will be saved in the current directory as `sample_resume.pdf`.
+
+---
+
+**Example Output**
+
+Below is an example structure of the resume:
+
+- **Name**: Jane Doe
+- **Contact**: Email and Phone Number
+- **Education**: Tabular format with columns for Institution Name, Year, and CGPA.
+- **Projects**:
+  - Project Title
+    - Bullet points describing details.
+- **Experience**:
+  - Job Title
+    - Bullet points describing responsibilities and achievements.
+- **Skills**: Listed in a simple bullet-point format.
+- **Extracurricular Activities**: Listed in a simple bullet-point format.
+
+---
+
+ **License**
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+This README is fully formatted for GitHub, including **headings**, **code blocks**, and **bolded sections** for better visibility. Let me know if you need further tweaks!
